@@ -31,6 +31,7 @@ import { DocumentsProvider } from "./chat/my-documents/DocumentsContext";
 import CloudError from "@/components/errorPages/CloudErrorPage";
 import Error from "@/components/errorPages/ErrorPage";
 import AccessRestrictedPage from "@/components/errorPages/AccessRestrictedPage";
+import { ClientThemeProvider } from "@/components/client-theme/ClientThemeProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -128,7 +129,10 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <div className="text-text min-h-screen bg-background">
-            <PHProvider>{content}</PHProvider>
+            {/* @ts-ignore - Dynamic import will handle this at runtime */}
+            <ClientThemeProvider initialClientId={process.env.NEXT_PUBLIC_CLIENT_ID}>
+              <PHProvider>{content}</PHProvider>
+            </ClientThemeProvider>
           </div>
         </ThemeProvider>
       </body>

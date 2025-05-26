@@ -1,5 +1,5 @@
-import { Logo } from "./logo/Logo";
-import { useContext } from "react";
+import { WhiteLabelLogo as Logo } from "./logo/WhiteLabelLogo";
+import React, { useContext } from "react";
 import { SettingsContext } from "./settings/SettingsProvider";
 
 export function OnyxInitializingLoader() {

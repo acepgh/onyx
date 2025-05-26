@@ -2,13 +2,13 @@
 
 import React, { memo } from "react";
 import { HeaderTitle } from "@/components/header/HeaderTitle";
-import { Logo } from "@/components/logo/Logo";
+import { WhiteLabelLogo as Logo } from "@/components/logo/WhiteLabelLogo";
 import { SettingsContext } from "@/components/settings/SettingsProvider";
 import { NEXT_PUBLIC_DO_NOT_USE_TOGGLE_OFF_DANSWER_POWERED } from "@/lib/constants";
 import Link from "next/link";
 import { useContext } from "react";
 import { FiSidebar } from "react-icons/fi";
-import { LogoType } from "@/components/logo/Logo";
+import { WhiteLabelLogoType as LogoType } from "@/components/logo/WhiteLabelLogo";
 import { EnterpriseSettings } from "@/app/admin/settings/interfaces";
 import { useRouter } from "next/navigation";
 

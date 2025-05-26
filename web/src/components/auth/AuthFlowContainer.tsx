@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Logo } from "../logo/Logo";
+import React from "react";
+import { WhiteLabelLogo as Logo } from "../logo/WhiteLabelLogo";
 
 export default function AuthFlowContainer({
   children,
